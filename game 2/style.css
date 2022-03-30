@@ -1,0 +1,18 @@
+body{
+    background: var(--bs-orange);
+    text-align: center;
+  }
+  
+  .btn-count{
+    background-color: var(--bs-teal);
+  }
+  
+  .counter-element{
+    background-color: var(--bs-yellow);
+    background-image: src=(flower.png);
+    line-height: 150px;
+    height: 150px;
+    width: 150px;
+    margin: auto;
+    border-radius: 150px;
+  }

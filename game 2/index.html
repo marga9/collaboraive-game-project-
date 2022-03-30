@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>simple counter</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <button class="btn btn-dark btn-count" onclick="add(this,5)"> food</button>
+  <button class="btn btn-dark btn-count" onclick="add(this,5)"> water</button>
+  <button class="btn btn-dark btn-count" onclick="add(this,4)"> fertilize</button>
+  <button class="btn btn-dark btn-count" onclick="add(this,2)"> add some dirt</button>
+  <button class="btn btn-dark btn-count" onclick="add(this,3)"> change the vase</button>
+  <button class="btn btn-dark btn-count" onclick="add(this,3)"> erbicide</button>
+  <div class="row">
+    <div class="col">
+      <div class="counter-element">0</div>
+    </div>
+  </div>
+
+  <h1>Target:</h1><div class="target">0</div>
+  <h1>Turn</h1><div class="turn"></div>
+
+  
+  <script>
+      
+
+    
+    let count = 0
+    let target = parseInt(Math.random() * 7) * 3
+    
+    let person1 = prompt("First person")
+    let person2 = prompt("Second person")
+
+    const turnEl = document.querySelector('.turn')
+    turnEl.innerHTML = person1
+    let secondsMissing = 10
+    const targetEl = document.querySelector('.target')
+    targetEl.innerHTML = target
+
+    const secondsEl = document.querySelector('.seconds')
+    // 2 - THINK ABOUT THE ACTIONS THAT JAVASCRIPT WILL NEED TO DO
+        // THESE WOULD BE THE FUNCTIONS OF YOUR APPLICATIONS
+
+    setInterval( ()=> {
+      secondsMissing--
+      secondsEl.innerHTML = secondsMissing
+      if (secondsMissing === 0){
+        alert("GAME OVER - " + turnEl.innerHTML+ " lost")
+      }
+    },1000)
+    const add = (element, numberToAdd) => {
+      element.setAttribute('disabled','disabled')
+      // change the variables
+      count = count + numberToAdd
+
+      // UPDATE the DOM 
+      const counterEl = document.querySelector('.counter-element')
+      counterEl.innerHTML = count
+
+      secondsMissing = 10;
+
+      if ( turnEl.innerHTML == person1 ){
+        turnEl.innerHTML = person2
+      }else{
+        turnEl.innerHTML = person1
+      }
+    }
+
+    // 3 - THINK WHEN WE HAVE TO EXECUTE THOSE FUNCTIONS 
+
+    
+
+  </script>
+</body>
+</html>
