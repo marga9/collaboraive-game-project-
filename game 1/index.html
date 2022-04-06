@@ -14,3 +14,24 @@
 </body>
 <script src="script.js"></script>
 </html>
+
+
+<script>
+    function component(width, height, color, x, y) {
+      this.width = 20;
+      this.height = 60;
+      this.speedX = 60;
+      this.speedY = 60;
+      this.x = 60;
+      this.y = 80; 
+      this.update = function() {
+        ctx = myGameArea.context;
+        ctx.fillStyle = color;
+        ctx.fillRect(this.x, this.y, this.width, this.height);
+      }
+      this.newPos = function() {
+        this.x += this.speedX;
+        this.y += this.speedY; 
+      } 
+    }
+    
