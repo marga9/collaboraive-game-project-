@@ -8,33 +8,36 @@
     border: 1px solid black;
     margin: auto;
     overflow: hidden;
+    position: relative;
 }
-#block{
-    width: 50px;
-    height: 500px;
+#block1{
+    width: 170px;
+    height: 50px;
     background-color: black;
     position: relative;
-    left: 400px;
+    left: 0px;
     animation: block 2s infinite linear;
+    background-repeat: repeat;
 }
 @keyframes block{
-    0%{left:400px}
-    100%{left:-50px}
+    0%{top:0}
+    100%{top:100%}
 }
-#hole{
-    width: 50px;
-    height: 150px;
-    background-color: rgb(7, 172, 255);
-    position: relative;
-    left: 400px;
-    top: -500px;
+#block2{
+    width: 160px;
+    height: 50px;
+    background-color: black;
+    position: absolute;
+    right: 0px;
     animation: block 2s infinite linear;
 }
+
+
 #character{
     width: 20px;
-    height: 20px;
+    min-height: 20px;
     background-color: red;
     position: absolute;
-    top: 100px;
-    border-radius: 50%;
+    left: 200px;
+    bottom: 0px;
 }
