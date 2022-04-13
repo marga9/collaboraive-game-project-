@@ -1,1 +1,85 @@
-yyy
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>simple counter</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <br>
+
+  <button class="btn btn-dark btn-count" onclick="add(this,'blue')"> Puglia</button>
+  <button class="btn btn-dark btn-count" onclick="add(this,5)"> Lombardia</button>
+  <button class="btn btn-dark btn-count" onclick="add(this,4)"> Veneto</button>
+  <button class="btn btn-dark btn-count" onclick="add(this,2)"> Marche</button>
+  <button class="btn btn-dark btn-count" onclick="add(this,3)"> Piemonte</button>
+  <button class="btn btn-dark btn-count" onclick="add(this,3)"> Molise</button>
+  <button class="btn btn-dark btn-count" onclick="add(this,5)"> Liguria</button>
+  <button class="btn btn-dark btn-count" onclick="add(this,5)"> Abruzzo</button>
+  <button class="btn btn-dark btn-count" onclick="add(this,4)"> Valle d'Aosta</button>
+  <button class="btn btn-dark btn-count" onclick="add(this,2)"> Campania</button>
+  <br><br>
+  <button class="btn btn-dark btn-count" onclick="add(this,3)"> Sicilia</button>
+  <button class="btn btn-dark btn-count" onclick="add(this,3)"> Basilicata</button>
+  <button class="btn btn-dark btn-count" onclick="add(this,3)"> Sardegna</button>
+  <button class="btn btn-dark btn-count" onclick="add(this,3)"> Trentino Alto Adige</button>
+  <button class="btn btn-dark btn-count" onclick="add(this,5)"> Friuli Venezia Giulia</button>
+  <button class="btn btn-dark btn-count" onclick="add(this,5)"> Emilia Romagna</button>
+  <button class="btn btn-dark btn-count" onclick="add(this,4)"> Umbria</button>
+  <button class="btn btn-dark btn-count" onclick="add(this,2)"> Toscana</button>
+  <button class="btn btn-dark btn-count" onclick="add(this,3)"> Lazio</button>
+
+    <div class="text-center">
+        <div class="color-guess">
+        </div>
+    </div>
+
+  <div class="row">
+    <div class="col">
+        <br><br>
+        
+        <div class="counter-element"></div>
+    </div>
+  </div>
+<br><br>
+
+<h1>Target:</h1><div class="target">0</div>
+<h1>Turn</h1><div class="turn"></div>
+
+  
+  <script>
+    const colors = ["blue","red","grey","yellow","orange","light blue","purple","black","pink","green","light green","dark green"]
+    let color ="" 
+    let i = null
+    const newColorToGuess = () => {
+        if (i !== null){
+            colors.splice(i,1)
+        }
+        i = parseInt(Math.random() * colors.length) 
+        color = colors[i]
+        const colorGuessEl = document.querySelector('.color-guess')
+        colorGuessEl.innerHTML = color
+    }
+    newColorToGuess()
+
+    const add = (element, answer) => {
+      element.setAttribute('disabled','disabled')
+      // change the variables
+      if (answer === color){
+          newColorToGuess()
+      }else{
+
+        alert("you die")
+      }
+    }
+
+    // 3 - THINK WHEN WE HAVE TO EXECUTE THOSE FUNCTIONS 
+
+    
+
+  </script>
+</body>
+</html>

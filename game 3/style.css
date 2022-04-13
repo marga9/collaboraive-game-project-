@@ -1,0 +1,19 @@
+body{
+    background: var(--bs-orange);
+    text-align: center;
+  }
+  
+  .btn-count{
+    background-color: var(--bs-teal);
+  }
+  
+  .counter-element{
+    background-color: var(--bs-yellow);
+    background-image: url(italia.jpg); 
+    background-size: cover;
+    line-height: 300px;
+    height: 640px;
+    width: 700px;
+    margin: auto;
+    border-radius: 14px;
+  }
