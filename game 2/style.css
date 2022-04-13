@@ -1,6 +1,9 @@
 body{
-    background: var(--bs-orange);
+    background-image: url(land-png.webp); 
+    /* background-position: 70px; */
+    background-size: cover;
     text-align: center;
+    min-height: 100vh;
   }
   
   .btn-count{
@@ -15,4 +18,10 @@ body{
     width: 220px;
     margin: auto;
     border-radius: 15px;
+  }
+
+  h1{
+  font-size: 25px;
+  font-style: font-family: 'Lora', serif;
+  font-family: 'Nunito Sans', sans-serif;;
   }
