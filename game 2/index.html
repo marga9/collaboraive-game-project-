@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,25 +12,24 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-      
-<br><br><br><br>
-  <h1> Lilies add elegance to any garden, they bloom from early summer all the way through fall depending on the type.
-they have six plain tepals. they come in many beautiful colors, including pink, gold, red, orange and white. [MORE INFO....]
+     
+  <br><br><br>
+  <h1> Lilies add elegance to any garden, sweet perfume, they bloom from early summer all the way through fall depending on the type.
+they have six plain tepals. They come in many beautiful colors, including pink, gold, red, orange and white. Let's see if you know something about them, especially about Asiatic Lillies and if your able to keep this flower alive.
     </h1>
-    
-    
-<br><br><br>
-  <button class="btn btn-dark btn-count" onclick="add(this,5)"> add water</button>
-  <button class="btn btn-dark btn-count" onclick="add(this,5)"> fertilize</button>
+      
+<br>
+  <button class="btn btn-dark btn-count" onclick="add(this,5)"> Add 1 or 2 inches of water per week </button>
+  <button class="btn btn-dark btn-count" onclick="add(this,5)"> Add fertilize</button>
   <button class="btn btn-dark btn-count" onclick="add(this,5)"> add some dirt</button>
   <button class="btn btn-dark btn-count" onclick="add(this,5)"> remove dead or wilting leaves and stem</button>
   <button class="btn btn-dark btn-count" onclick="add(this,5)"> clean the vase thoroughly</button>
   <button class="btn btn-dark btn-count" onclick="add(this,5)"> 6 to 8 hours of direct sunlight a day</button>
-  <button class="btn btn-dark btn-count" onclick="add(this,-20)"> bad thing</button>
-  <button class="btn btn-dark btn-count" onclick="add(this,0)"> bad thing</button>
-  <button class="btn btn-dark btn-count" onclick="add(this,0)"> bad thing</button>
-  <button class="btn btn-dark btn-count" onclick="add(this,0)"> bad thing</button>
+  <button class="btn btn-dark btn-count" onclick="add(this,-20)"> keep the lillie inside during summer, when the tempersture is hot. </button>
+  <button class="btn btn-dark btn-count" onclick="add(this,5)"> Place them in a vase of fresh water.</button>
+  <button class="btn btn-dark btn-count" onclick="add(this,-20)"> Add natural and biological vinegar.</button>
+  <button class="btn btn-dark btn-count" onclick="add(this,-20)"> spray an herbicide called glyphosate</button>
+  <button class="btn btn-dark btn-count" onclick="add(this,-20)"> They don't need too much space around them </button>
   <div class="row">
     <div class="col">
       <br><br>
@@ -69,6 +69,9 @@ they have six plain tepals. they come in many beautiful colors, including pink, 
       }
     },1000)
     const add = (element, numberToAdd) => {
+      if (numberToAdd === -20){
+        alert("you loose! Try again!")
+      }
       // element.setAttribute('disabled','disabled')
       // change the variables
       count = count + numberToAdd
