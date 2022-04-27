@@ -1,7 +1,10 @@
 //element of the pages
 const block1 = document.getElementById("block1");
 const block2 = document.getElementById("block2");
+const block2 = document.getElementById("block2");
 const character = document.getElementById("character");
+this.speedX = 0;
+this.speedY = 0;
 
 // variables for the games
 let counter = 0;
@@ -20,10 +23,10 @@ setInterval(() => {
 // input management
 document.onkeydown = (e) => {
   if (e.key ==="ArrowLeft"){
-    direction = -1
+    direction = -3
   }
   if (e.key ==="ArrowRight"){
-    direction = 1
+    direction = 3
   }
 }
 
